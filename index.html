@@ -12,24 +12,26 @@
     <div class="container">
       <header><h1>World Clocks</h1></header>
       <main>
-        <select>
-          <option value="">select a city</option>
-          <option value="">london</option>
-          <option value="">new york</option>
+        <select id="city">
+          <option value="">Select a city</option>
+          <option value="Europe/London">London</option>
+          <option value="America/New_York">New York</option>
         </select>
-        <div class="city" id="los-angeles">
-          <div>
-            <h2>Los Angeles</h2>
-            <div class="date"></div>
+        <div id="cities">
+          <div class="city" id="los-angeles">
+            <div>
+              <h2>Los Angeles</h2>
+              <div class="date"></div>
+            </div>
+            <div class="time"><small></small></div>
           </div>
-          <div class="time"><small></small></div>
-        </div>
-        <div class="city" id="paris">
-          <div>
-            <h2>Paris</h2>
-            <div class="date"></div>
+          <div class="city" id="paris">
+            <div>
+              <h2>Paris</h2>
+              <div class="date"></div>
+            </div>
+            <div class="time"></div>
           </div>
-          <div class="time"></div>
         </div>
       </main>
       <footer>
