@@ -21,11 +21,21 @@ function updateTime() {
 }
 function changeCity(event) {
   let cityTimeZone = event.target.value;
+
   if (cityTimeZone) {
+    let cityTime;
+
+    if (cityTimeZone === "current") {
+      cityTimeZone = moment.tz.guess();
+      cityTime = moment().tz(cityTimeZone);
+    } else {
+      cityTime = moment().tz(cityTimeZone);
+    }
+
     let cityName = cityTimeZone.replace("_", " ").split("/")[1];
-    let cityTime = moment().tz(cityTimeZone);
+
     let cityElement = document.getElementById("cities");
-    cityElement.innerHTML = `<div class="city" >
+    cityElement.innerHTML = `<div class="city">
             <div>
               <h2>${cityName}</h2>
               <div class="date">${cityTime.format("MMMM DD yyyy")}</div>
